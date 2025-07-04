@@ -1,132 +1,136 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <title>蔡俊安的履歷 / Antony Tsai Resume</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>蔡俊安 Antony Tsai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    html {
+    :root {
+      --bg: #f9f9f9;
+      --accent: #0d6efd;
+      --text: #2d2d2d;
+      --light: #777;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
       scroll-behavior: smooth;
     }
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: #3498db;
-      padding: 12px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    header {
+      background: white;
+      padding: 2rem;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
     }
-    nav .title {
-      font-size: 18px;
-      color: #fff;
-      font-weight: bold;
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      color: var(--light);
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background: var(--bg);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     nav a {
-      color: white;
-      margin: 0 12px;
       text-decoration: none;
-      font-size: 14px;
+      color: var(--text);
+      font-weight: 500;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: var(--accent);
     }
-    .container {
-      margin-top: 100px;
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    section h2 {
+      border-left: 4px solid var(--accent);
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li::before {
+      content: '\2022';
+      color: var(--accent);
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--light);
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>蔡俊安 Antony Tsai</h1>
+    <p>嵌入式軟體工程師 | C++ / Qt / Python / Linux</p>
+  </header>
+
   <nav>
-    <div class="title">蔡俊安 / Antony Tsai</div>
-    <div>
-      <a href="#intro">自我介紹</a>
-      <a href="#education">學歷</a>
-      <a href="#work">經歷</a>
-      <a href="#projects">作品</a>
-      <a href="#skills">技能</a>
-      <a href="#contact">聯絡</a>
-      <button onclick="switchLanguage('zh')">中</button>
-      <button onclick="switchLanguage('en')">EN</button>
-    </div>
+    <a href="#about">關於</a>
+    <a href="#education">學歷</a>
+    <a href="#experience">經歷</a>
+    <a href="#projects">作品</a>
+    <a href="#contact">聯絡</a>
   </nav>
 
-  <div class="container">
-    <div class="lang zh">
-      <h1 id="intro">你好，我是蔡俊安</h1>
-      <p>目前任職於視銳光科技股份有限公司，擔任嵌入式軟體工程師。</p>
-      <p>碩士畢業於長庚大學生物醫學工程所。</p>
-      <p>個性溫和、具備良好的團隊合作與溝通能力，樂於接受挑戰與新知。</p>
-      <p>具備 C++/Qt 開發經驗，熟悉 Linux 架構與 Python 測試自動化。</p>
+  <section id="about">
+    <h2>關於我</h2>
+    <p>目前任職於視銳光科技股份有限公司，負責嵌入式軟體開發、Qt GUI、Linux 驅動與 Python 測試工具設計。碩士畢業於長庚大學生醫工程所，擅長跨領域整合與自學能力，具備良好溝通與團隊協作能力。</p>
+  </section>
 
-      <h2 id="education">學歷</h2>
-      <ul>
-        <li>長庚大學生物醫學工程所（碩士，2022/7~2024/8）</li>
-        <li>慈濟大學生物醫學工程學系（學士，2018/9~2022/6）</li>
-      </ul>
+  <section id="education">
+    <h2>學歷</h2>
+    <ul>
+      <li>長庚大學生物醫學工程研究所，碩士，2022/7–2024/8</li>
+      <li>慈濟大學醫學資訊學系，學士，2018/9–2022/6</li>
+    </ul>
+  </section>
 
-      <h2 id="work">工作經歷</h2>
-      <ul>
-        <li>視銳光科技股份有限公司 — 軟體工程師（2025/4 ~ 至今）</li>
-        <li>百事可樂股份有限公司 — 助理工程師實習（2022/2 ~ 2022/6）</li>
-      </ul>
+  <section id="experience">
+    <h2>工作經歷</h2>
+    <ul>
+      <li>視銳光科技股份有限公司，韌體工程師，2025/4–今</li>
+      <li>百事益國際股份有限公司，軟體實習助理工程師，2022/2–2022/6</li>
+    </ul>
+  </section>
 
-      <h2 id="projects">專案作品</h2>
-      <ul>
-        <li>IMU + Unity3D 虛擬復健訓練平台開發</li>
-        <li>Python 自動化驗證腳本開發</li>
-        <li>Qt GUI 功能設計與 PTZ 控制器整合</li>
-        <li>Web Form 與 Web API 內部系統開發（實習期間）</li>
-      </ul>
+  <section id="projects">
+    <h2>專案作品</h2>
+    <ul>
+      <li>IMU + Unity3D 虛擬復健平台開發</li>
+      <li>Python 測試自動化工具</li>
+      <li>Qt GUI 與 PTZ 攝影機控制功能</li>
+      <li>Web Form / API 系統設計（實習期間）</li>
+    </ul>
+  </section>
 
-      <h2 id="skills">技能</h2>
-      <p>C++, Python, Qt, Linux, MATLAB, ASP.NET, Unity3D, SQL</p>
+  <section id="contact">
+    <h2>聯絡資訊</h2>
+    <p>Email: antony881130@gmail.com<br>
+    </p>
+  </section>
 
-      <h2 id="contact">聯絡方式</h2>
-      <p>Email: antony881130@gmail.com</p>
-      <p>GitHub: https://github.com/yourusername</p>
-    </div>
-
-    <div class="lang en" style="display: none;">
-      <h1 id="intro">Hi, I'm Antony Tsai</h1>
-      <p>Currently working as an embedded software engineer at Sray Technologies, Inc.</p>
-      <p>Graduated with a master's degree in Biomedical Engineering from Chang Gung University.</p>
-      <p>I am a calm, collaborative person who enjoys learning and facing new challenges.</p>
-      <p>Experienced in C++/Qt development, Linux systems, and Python-based automation tools.</p>
-
-      <h2 id="education">Education</h2>
-      <ul>
-        <li>Chang Gung University — Biomedical Engineering (Master, 2022/7~2024/8)</li>
-        <li>Tzu Chi University — Biomedical Engineering (Bachelor, 2018/9~2022/6)</li>
-      </ul>
-
-      <h2 id="work">Work Experience</h2>
-      <ul>
-        <li>Sray Technologies Inc. — Software Engineer (Apr. 2025 ~ Present)</li>
-        <li>PepsiCo — Intern Assistant Engineer (Feb. 2022 ~ Jun. 2022)</li>
-      </ul>
-
-      <h2 id="projects">Projects</h2>
-      <ul>
-        <li>IMU + Unity3D virtual rehabilitation platform</li>
-        <li>Python automation testing scripts</li>
-        <li>Qt GUI development and PTZ controller integration</li>
-        <li>Internal web systems using Web Forms and Web APIs (during internship)</li>
-      </ul>
-
-      <h2 id="skills">Skills</h2>
-      <p>C++, Python, Qt, Linux, MATLAB, ASP.NET, Unity3D, SQL</p>
-
-      <h2 id="contact">Contact</h2>
-      <p>Email: antony881130@gmail.com</p>
-      <p>GitHub: https://github.com/yourusername</p>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
