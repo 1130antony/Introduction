@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <title>蔡俊安的自我介紹</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    .card {
-      background: white;
-      padding: 30px;
-      margin: auto;
-      width: 80%;
-      max-width: 600px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      border-radius: 10px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <title>蔡俊安的履歷 / Antony Tsai Resume</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="card">
-    <h1>你好，我是蔡俊安</h1>
-    <p>🎓 長庚大學醫學工程所碩士</p>
-    <p>💼 現在在做嵌入式軟體開發（C++、Python、Linux）</p>
-    <p>🧠 興趣包括電腦視覺、機器學習、自動化腳本</p>
-    <p>📫 Email: antony881130@gmail.com</p>
+  <div class="lang-switch">
+    <button onclick="switchLanguage('zh')">中文</button>
+    <button onclick="switchLanguage('en')">English</button>
   </div>
+
+  <div class="container">
+    <h1>
+      <span class="lang zh">你好，我是蔡俊安</span>
+      <span class="lang en" style="display: none;">Hi, I'm Antony Tsai</span>
+    </h1>
+    <p class="lang zh">我是嵌入式軟體工程師，擅長 C++ / Linux / Python。</p>
+    <p class="lang en" style="display: none;">I'm an embedded software engineer specializing in C++, Linux, and Python.</p>
+    <p class="lang zh">技能：電腦視覺、自動化腳本、嵌入式開發、Qt GUI、Git 工作流</p>
+    <p class="lang en" style="display: none;">Skills: Computer Vision, Automation Scripts, Embedded Systems, Qt GUI, Git Workflow</p>
+
+    <h2 class="lang zh">📬 聯絡我</h2>
+    <h2 class="lang en" style="display: none;">📬 Contact Me</h2>
+
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <label class="lang zh">姓名：<input type="text" name="name" required /></label>
+      <label class="lang en" style="display:none;">Name: <input type="text" name="name" required /></label>
+
+      <label class="lang zh">電話：<input type="tel" name="phone" /></label>
+      <label class="lang en" style="display:none;">Phone: <input type="tel" name="phone" /></label>
+
+      <label class="lang zh">Email：<input type="email" name="email" required /></label>
+      <label class="lang en" style="display:none;">Email: <input type="email" name="email" required /></label>
+
+      <label class="lang zh">留言：<textarea name="message" rows="4" required></textarea></label>
+      <label class="lang en" style="display:none;">Message: <textarea name="message" rows="4" required></textarea></label>
+
+      <button type="submit" class="lang zh">送出</button>
+      <button type="submit" class="lang en" style="display:none;">Submit</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
