@@ -12,33 +12,35 @@
   </div>
 
   <div class="container">
-    <h1>
-      <span class="lang zh">你好，我是蔡俊安</span>
-      <span class="lang en" style="display: none;">Hi, I'm Antony Tsai</span>
-    </h1>
-    <p class="lang zh">我是嵌入式軟體工程師，擅長 C++ / Linux / Python。</p>
-    <p class="lang en" style="display: none;">I'm an embedded software engineer specializing in C++, Linux, and Python.</p>
-    <p class="lang zh">技能：電腦視覺、自動化腳本、嵌入式開發、Qt GUI、Git 工作流</p>
-    <p class="lang en" style="display: none;">Skills: Computer Vision, Automation Scripts, Embedded Systems, Qt GUI, Git Workflow</p>
+    <div class="lang zh">
+      <h1>你好，我是蔡俊安</h1>
+      <p>我是嵌入式軟體工程師，擅長 C++ / Linux / Python。</p>
+      <p>技能：電腦視覺、自動化腳本、嵌入式開發、Qt GUI、Git 工作流</p>
+      <h2>📬 聯絡我</h2>
+    </div>
 
-    <h2 class="lang zh">📬 聯絡我</h2>
-    <h2 class="lang en" style="display: none;">📬 Contact Me</h2>
+    <div class="lang en" style="display: none;">
+      <h1>Hi, I'm Antony Tsai</h1>
+      <p>I'm an embedded software engineer specializing in C++, Linux, and Python.</p>
+      <p>Skills: Computer Vision, Automation Scripts, Embedded Systems, Qt GUI, Git Workflow</p>
+      <h2>📬 Contact Me</h2>
+    </div>
 
     <form action="https://formspree.io/f/your-form-id" method="POST">
-      <label class="lang zh">姓名：<input type="text" name="name" required /></label>
-      <label class="lang en" style="display:none;">Name: <input type="text" name="name" required /></label>
-
-      <label class="lang zh">電話：<input type="tel" name="phone" /></label>
-      <label class="lang en" style="display:none;">Phone: <input type="tel" name="phone" /></label>
-
-      <label class="lang zh">Email：<input type="email" name="email" required /></label>
-      <label class="lang en" style="display:none;">Email: <input type="email" name="email" required /></label>
-
-      <label class="lang zh">留言：<textarea name="message" rows="4" required></textarea></label>
-      <label class="lang en" style="display:none;">Message: <textarea name="message" rows="4" required></textarea></label>
-
-      <button type="submit" class="lang zh">送出</button>
-      <button type="submit" class="lang en" style="display:none;">Submit</button>
+      <div class="lang zh">
+        <label>姓名：<input type="text" name="name" required /></label><br>
+        <label>電話：<input type="tel" name="phone" /></label><br>
+        <label>Email：<input type="email" name="email" required /></label><br>
+        <label>留言：<textarea name="message" rows="4" required></textarea></label><br>
+        <button type="submit">送出</button>
+      </div>
+      <div class="lang en" style="display: none;">
+        <label>Name: <input type="text" name="name" required /></label><br>
+        <label>Phone: <input type="tel" name="phone" /></label><br>
+        <label>Email: <input type="email" name="email" required /></label><br>
+        <label>Message: <textarea name="message" rows="4" required></textarea></label><br>
+        <button type="submit">Submit</button>
+      </div>
     </form>
   </div>
 
