@@ -1,39 +1,124 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #eef2f3, #d9e4f5);
   margin: 0;
   padding: 0;
+  color: #2c3e50;
+  line-height: 1.8;
+}
+
+.container {
+  margin: 100px auto 60px;
+  padding: 60px;
+  max-width: 900px;
+  background: white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container > * {
+  max-width: 720px;
+  width: 100%;
   text-align: center;
 }
-.container {
-  margin: 50px auto;
-  padding: 40px;
-  max-width: 600px;
-  background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 10px;
+
+h1 {
+  font-size: 40px;
+  color: #2c3e50;
+  margin-bottom: 20px;
 }
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  font-size: 16px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+
+h2 {
+  font-size: 28px;
+  color: #2980b9;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #3498db;
+  display: inline-block;
+  padding-bottom: 4px;
 }
+
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left;
+}
+
+ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
 button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background: #2c3e50;
+  padding: 8px 16px;
+  font-size: 15px;
+  background: #3498db;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  margin: 5px;
+  margin-left: 4px;
+  margin-right: 4px;
+  transition: background 0.3s;
 }
+button:hover {
+  background: #2980b9;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #3498db;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+nav .title {
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+}
+nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 15px;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
 .lang-switch {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 30px;
+    margin: 100px 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav .title {
+    margin-bottom: 10px;
+  }
 }
