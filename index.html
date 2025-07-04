@@ -25,6 +25,9 @@
       padding: 2rem;
       border-bottom: 1px solid #ddd;
       text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease-out forwards;
     }
     header h1 {
       margin: 0;
@@ -55,6 +58,10 @@
       padding: 4rem 2rem;
       max-width: 900px;
       margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease-out forwards;
+      animation-delay: 0.3s;
     }
     section h2 {
       border-left: 4px solid var(--accent);
@@ -79,55 +86,89 @@
       color: var(--light);
       font-size: 0.9rem;
     }
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lang = navigator.language || navigator.userLanguage;
+      const isZh = lang.startsWith("zh");
+      if (!isZh) {
+        document.querySelectorAll("[lang='zh-Hant']").forEach(el => el.style.display = "none");
+        document.querySelectorAll("[lang='en']").forEach(el => el.style.display = "block");
+      }
+    });
+  </script>
 </head>
 <body>
-  <header>
+  <header lang="zh-Hant">
     <h1>蔡俊安 Antony Tsai</h1>
-    <p>嵌入式軟體工程師 | C++ / Qt / Python / Linux</p>
+    <p>嵌入式韌體工程師 | C++ / Qt / Python / Linux</p>
+  </header>
+  <header lang="en" style="display:none">
+    <h1>Antony Tsai</h1>
+    <p>Embedded Firmware Engineer | C++ / Qt / Python / Linux</p>
   </header>
 
   <nav>
-    <a href="#about">關於</a>
-    <a href="#education">學歷</a>
-    <a href="#experience">經歷</a>
-    <a href="#projects">作品</a>
-    <a href="#contact">聯絡</a>
+    <a href="#about">關於 / About</a>
+    <a href="#education">學歷 / Education</a>
+    <a href="#experience">經歷 / Experience</a>
+    <a href="#projects">作品 / Projects</a>
+    <a href="#contact">聯絡 / Contact</a>
   </nav>
 
   <section id="about">
-    <h2>關於我</h2>
-    <p>目前任職於視銳光科技股份有限公司，負責嵌入式軟體開發、Qt GUI、Linux 驅動與 Python 測試工具設計。碩士畢業於長庚大學生醫工程所，擅長跨領域整合與自學能力，具備良好溝通與團隊協作能力。</p>
+    <h2 lang="zh-Hant">關於我</h2>
+    <h2 lang="en" style="display:none">About Me</h2>
+    <p lang="zh-Hant">目前任職於視銳光科技股份有限公司，負責嵌入式韌體開發、Qt GUI、Linux 驅動與 Python 測試工具設計。碩士畢業於長庚大學生醫工程所，擅長跨領域整合與自學能力，具備良好溝通與團隊協作能力。</p>
+    <p lang="en" style="display:none">Currently working at Sray Technologies Inc. focusing on embedded systems, Qt GUI, Linux integration and Python automation. Holds a Master degree in Biomedical Engineering from Chang Gung University.</p>
   </section>
 
   <section id="education">
-    <h2>學歷</h2>
+    <h2 lang="zh-Hant">學歷</h2>
+    <h2 lang="en" style="display:none">Education</h2>
     <ul>
-      <li>長庚大學生物醫學工程研究所，碩士，2022/7–2024/8</li>
-      <li>慈濟大學醫學資訊學系，學士，2018/9–2022/6</li>
+      <li lang="zh-Hant">長庚大學生物醫學工程研究所，碩士，2022/7–2024/8</li>
+      <li lang="zh-Hant">慈濟大學醫學資訊學系，學士，2018/9–2022/6</li>
+      <li lang="en" style="display:none">Chang Gung University, Biomedical Engineering, M.S., 2022/7–2024/8</li>
+      <li lang="en" style="display:none">Tzu Chi University, Biomedical Information, B.S., 2018/9–2022/6</li>
     </ul>
   </section>
 
   <section id="experience">
-    <h2>工作經歷</h2>
+    <h2 lang="zh-Hant">工作經歷</h2>
+    <h2 lang="en" style="display:none">Work Experience</h2>
     <ul>
-      <li>視銳光科技股份有限公司，韌體工程師，2025/4–今</li>
-      <li>百事益國際股份有限公司，軟體實習助理工程師，2022/2–2022/6</li>
+      <li lang="zh-Hant">視銳光科技股份有限公司，軟體工程師，2025/4–今</li>
+      <li lang="zh-Hant">百事益國際股份有限公司，實習助理工程師，2022/2–2022/6</li>
+      <li lang="en" style="display:none">Sray Technologies Inc., Software Engineer, 2025/4–Present</li>
+      <li lang="en" style="display:none">BestYield, Assistant Engineer Intern, 2022/2–2022/6</li>
     </ul>
   </section>
 
   <section id="projects">
-    <h2>專案作品</h2>
+    <h2 lang="zh-Hant">專案作品</h2>
+    <h2 lang="en" style="display:none">Projects</h2>
     <ul>
-      <li>IMU + Unity3D 虛擬復健平台開發</li>
-      <li>Python 測試自動化工具</li>
-      <li>Qt GUI 與 PTZ 攝影機控制功能</li>
-      <li>Web Form / API 系統設計（實習期間）</li>
+      <li lang="zh-Hant">IMU + Unity3D 虛擬復健平台開發</li>
+      <li lang="zh-Hant">Python 測試自動化工具</li>
+      <li lang="zh-Hant">Qt GUI 與 PTZ 攝影機控制功能</li>
+      <li lang="zh-Hant">Web Form / API 系統設計（實習期間）</li>
+      <li lang="en" style="display:none">IMU + Unity3D Virtual Rehab Platform</li>
+      <li lang="en" style="display:none">Python Automation Tools</li>
+      <li lang="en" style="display:none">Qt GUI with PTZ Control</li>
+      <li lang="en" style="display:none">Web Form/API System Development (Intern)</li>
     </ul>
   </section>
 
   <section id="contact">
-    <h2>聯絡資訊</h2>
+    <h2 lang="zh-Hant">聯絡資訊</h2>
+    <h2 lang="en" style="display:none">Contact</h2>
     <p>Email: antony881130@gmail.com<br>
     </p>
   </section>
